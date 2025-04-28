@@ -175,6 +175,10 @@ This block displays the date and links to Google Calendar.
 </p>
 {% endif %}
 
+<p id="registration">
+  <strong>Registration & Surveys:</strong> https://events.hifis.net/event/2097/
+</p>
+
 {% comment %}
 SPECIAL REQUIREMENTS
 
