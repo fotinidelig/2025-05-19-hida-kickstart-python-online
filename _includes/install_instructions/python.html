@@ -5,146 +5,132 @@ using something other than the Jupyter Notebook. Details at
 
 https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility
 {% endcomment %}
+
+
 <div id="python">
-  <h3>Python</h3>
+  <h3>Python Setup</h3>
 
   <p>
-    <a href="https://python.org">Python</a> is a popular language for
-    research computing, and great for general-purpose programming as
-    well.  Installing all of its research packages individually can be
-    a bit difficult, so we recommend
-    <a href="https://conda-forge.org/download/">Conda-forge</a>,
-    an all-in-one installer.
+    We offer two options. A local setup on your own computer, and a setup-free browser-based solution. We recommend the local setup for setting you up for a continued growth of your future programming skills. But if you don't have time for the setup, go for the browser-based solution. That is fine.
   </p>
 
   <p>
-    Regardless of how you choose to install it,
-    <strong>please make sure you install a Python version >= 3.9</strong>
-    (e.g. 3.11 is fine, 3.6 is not).
+    In all of the offered solutions, we will use <a href="https://jupyter.org/">Jupyter</a> notebooks for programming, a popular approach in data science. The interfaces in all solutions are nearly identical.
   </p>
 
-  {% comment %}
-  Please remove or comment out this paragraph using
-  <!-- and --> or  {% comment %} and {% endcomment %}
-  if you do not plan to use Jupyter Notebook environment.
-  {% endcomment %}
+  <h4>Browser-based setup</h4>
+
   <p>
-    We will teach Python using the <a href="https://jupyter.org/">Jupyter Notebook</a>,
-    a programming environment that runs in a web browser (Jupyter Notebook will be installed by Miniforge). For this to work you will need a reasonably
-    up-to-date browser. The current versions of the Chrome, Safari and
-    Firefox browsers are all
-    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-    (some older browsers, including Internet Explorer version 9
-    and below, are not).
+    If you don't want to do or can't do the local setup, we offer a setup-free, browser-based solution. We will use Google Colab. This is a free service by Google for browser-based Python programming. You will need: a compatible web browser (Chromium, Firefox or Safari; Chromium is recommended), and a personal Google account. If you don't have one, create one here: <a href="https://accounts.google.com/signup">https://accounts.google.com/signup</a>. Then try to access <a href="https://colab.research.google.com/">Google Colab</a>. If that works, you are done. We will distribute a Colab notebook template for you to use in the course.
   </p>
 
-  <div>
-    <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#python-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#python-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#python-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
-    </ul>
+  <p>
+    If you don't want to use Google Colab, while we acknowledge that there alternatives to Google Colab that do not require a Google account, we kindly ask you to attempt the local setup, instead. This course relies on all instructors and students to have the same setup. We lack personnel to be able to offer support for more than two setups at a time.
+  </p>
 
-    <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="python-windows">
-        <ol>
-          <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
-          <li>Download the Miniforge for Windows installer</li>
-	  <li>Double click on the downloaded file (Something like, <code>Minforge3-Windows-x86_64.exe</code>)</li>
-	  <li>If you get a "Windows protected your PC" pop-up from Microsoft Defender SmartScreen, click on "More info" and select "Run anyway"</li>
-          <li>Follow through the installer using all of the defaults for installation <em>except</em> make sure to check <strong>Add Miniforge3 to my PATH environment variable</strong>.</li>
-	  {% comment %}
-	  <li>Search for the application "Miniforge Prompt", open it and run: <code>conda install jupyter</code> and click <kbd>Enter</kbd> when asked for confirmation.</li>
-	  if we want to add an icon, it can be done with:
-	  https://medium.com/@kostal91/create-a-desktop-shortcut-for-jupyterlab-on-windows-9fcabcfa0d3f - easier and more convenient using %userprofile% variable rather than users\%username%
-	  and need to update miniconda for miniforge
-	  Also, the https://pypi.org/project/start-jupyter-cm/ could be helpful.
-	  {% endcomment %}
-	  <li>Download the <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml" download>environment file</a>. Save the file to your Downloads folder.<br>
-	    (The following steps requires using the shell. If you aren't
-            comfortable doing the installation yourself
-            stop here and request help at the workshop.)
-	  </li>
-	  <li>Search for the application "Miniforge Prompt", open it and run: <code>conda env create -f .\Downloads\carpentries_environment.yml</code></li>
-          <li>Close the terminal window.</li>
-        </ol>
-      </article>
-      <article role="tabpanel" class="tab-pane" id="python-macos">
-        <ol>
-          <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
-          <li>Download the appropriate Miniforge installer for macOS<br>
-	    (The following steps requires using the shell. If you aren't
-            comfortable doing the installation yourself
-            stop here and request help at the workshop.)
-	  </li>
-          <li>
-            Open a terminal window and navigate to the directory where
-            the executable is downloaded (e.g., <code>cd ~/Downloads</code>).
-          </li>
-          <li>
-            Type <pre>bash Miniforge3-</pre> and then press
-            <kbd>Tab</kbd> to autocomplete the full file name. The name of
-            file you just downloaded should appear.
-          </li>
-          <li>
-            Press <kbd>Enter</kbd>
-            (or <kbd>Return</kbd> depending on your keyboard).
-            You will follow the text-only prompts.
-            To move through the text, press <kbd>Spacebar</kbd>.
-            Type <code>yes</code> and press enter to approve the license.
-            Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
-            to approve the default location
-            for the files.
-            Type <code>yes</code> and press
-            <kbd>Enter</kbd> (or <kbd>Return</kbd>)
-            to prepend Miniforge to your <code>PATH</code>
-            (this makes the Miniforge distribution the default Python).
-          </li>
-	  <li>Download the <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml" download>environment file</a>. Save the file to your Downloads folder.</li>
-	  <li>On the terminal run: <code>conda env create -f ~/Downloads/carpentries_environment.yml</code></li>
-          <li>
-            Close the terminal window.
-          </li>
-        </ol>
-      </article>
-      <article role="tabpanel" class="tab-pane" id="python-linux">
-        <ol>
-          <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
-          <li>Download the appropriate Miniforge installer for Linux<br>
-	    (The following steps requires using the shell. If you aren't
-            comfortable doing the installation yourself
-            stop here and request help at the workshop.)
-	  </li>
-          <li>
-            Open a terminal window and navigate to the directory where
-            the executable is downloaded (e.g., `cd ~/Downloads`).
-          </li>
-          <li>
-            Type <pre>bash Miniforge3-</pre> and then press
-            <kbd>Tab</kbd> to autocomplete the full file name. The name of
-            file you just downloaded should appear.
-          </li>
-          <li>
-            Press <kbd>Enter</kbd>
-            (or <kbd>Return</kbd> depending on your keyboard).
-            You will follow the text-only prompts.
-            To move through the text, press <kbd>Spacebar</kbd>.
-            Type <code>yes</code> and press enter to approve the license.
-            Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
-            to approve the default location
-            for the files.
-            Type <code>yes</code> and press
-            <kbd>Enter</kbd> (or <kbd>Return</kbd>)
-            to prepend Miniforge to your <code>PATH</code>
-            (this makes the Miniforge distribution the default Python).
-          </li>
-	  <li>Download the <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml" download>environment file</a>. Save the file to your Downloads folder.</li>
-	  <li>Search for the application "Miniforge Prompt", open it and run: <code>conda env create -f ~/Downloads/carpentries_environment.yml</code></li>
-          <li>
-            Close the terminal window.
-          </li>
-        </ol>
-      </article>
-    </div>
-  </div>
+  <p>
+    You are now done with the browser-based setup.
+  </p>
+
+  <h4>Local setup (recommended)</h4>
+
+  <p>
+    For the local setup, we need to install two things: the official python.org Python distribution and an editor for the programming. If at any point during the installation, you fail to proceed because of missing administrator rights, please contact your local system administrator or tech support, and ask them to install the software for you. Please ask them to stick to the software and extensions mentioned here. This course relies on all instructors and students have a similar setup, to minimize differing setup issues.
+  </p>
+
+  <p>
+    <em>An aside note. Editions prior to 2025 of this course used the Anaconda Python distribution. However, due to change in licensing, this option is not viable anymore for research organizations like the Helmholtz Society. If you would like more information on this, see <a href="https://www.fz-juelich.de/en/rse/the_latest/the-anaconda-is-squeezing-us">here</a>.</em>
+  </p>
+
+  <h5>1. Install Python</h5>
+
+  <p>
+    Check if Python is already installed on your computer. Open a terminal/command prompt.
+  </p>
+
+  <ul>
+    <li><strong>Windows</strong>: Press <kbd>Windows key + R</kbd>, type <code>cmd</code> and press Enter</li>
+    <li><strong>Mac</strong>: Press <kbd>Command key + Space</kbd>, type <code>term</code>, select Terminal and press Enter</li>
+    <li><strong>Linux</strong>: Press <kbd>Ctrl + Alt + T</kbd> or find Terminal in your applications menu</li>
+  </ul>
+
+  <p>
+    Check for Python. Type one of these commands and press Enter:
+  </p>
+
+  <pre><code>python --version</code></pre>
+
+  <p>If that doesn't work, try:</p>
+  <pre><code>python3 --version</code></pre>
+
+  <p>Windows users can also try:</p>
+  <pre><code>py --version</code></pre>
+
+  <p>
+    If any command returns a version number 3.9 or higher (e.g., <code>Python 3.11.5</code>), Python is installed and you can proceed to the VS Code installation.
+  </p>
+
+  <p>
+    If Python is not found or version is too old, we will install it now.
+  </p>
+
+  <ol>
+    <li>Visit <a href="https://python.org/downloads">python.org/downloads</a></li>
+    <li>Download the latest version for your operating system</li>
+    <li>Run the installer
+      <ul>
+        <li><strong>Windows users</strong>: Check the box "Add Python to PATH" during installation</li>
+        <li><strong>Mac/Linux users</strong>: Follow the default installation options</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>
+    After installation, open a new terminal window and check again, using the same method as before, to confirm Python is now installed correctly. You may need to open a new terminal tab or window for the update to the system to be recognized.
+  </p>
+
+  <p>
+    The next thing to do is to set up a project folder and a Python virtual environment to work with data science libraries in Jupyter notebooks. However, we will do this all together during the course.
+  </p>
+
+  <h5>2. Install Visual Studio Code (optional)</h5>
+
+  <p>
+      At this point, you can either choose to stop, or proceed to installing Visual Studio Code. If you choose to stop, you will work with <a href="https://jupyter.org/">JupyterLab</a>. This comes together with the virtual environment that we'll set up together, so you don't need to do that now. We give you either option, because the interfaces of all these options (Google Colab, JupyterLab, VSCode) are very similar. For data science beginners, JupyterLab is absolutely fine. If you are already curious, proceed to VSCode.
+  </p>
+
+  <p>
+    Visual Studio Code is a popular, free code editor by Microsoft for Python and other programming languages. The editor itself only has basic programming features. But the rich ecosystem of community-driven extensions makes it adaptable to most programming tasks.
+  </p>
+
+  <p>
+    Download it from <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.
+  </p>
+
+  <p>
+    We want to make you aware that while Microsoft's VS Code is open source, it collects anonymized telemetry data for product improvement (<a href="https://code.visualstudio.com/docs/editor/telemetry">reference</a>). If you do not want that, there is a community-driven version that does not collect telemetry data, <a href="https://vscodium.com/">here</a>. In the course, we will only be able to give support for issues with the Microsoft version.
+  </p>
+
+  <p>
+    Now we need to install VSCode extensions needed for this course.
+  </p>
+
+  <ol>
+    <li>Open VSCode</li>
+    <li>Click on the Extensions icon in the left sidebar (looks like four squares)</li>
+    <li>Search these extension and click "Install":
+      <ul>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python (by Microsoft)</a></li>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter (by Microsoft)</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>
+    After the extension installations are complete, close the editor.
+  </p>
+
+  <p>
+      You are now done with the local setup.
+  </p>
 </div>
