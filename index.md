@@ -176,7 +176,7 @@ This block displays the date and links to Google Calendar.
 {% endif %}
 
 <p id="registration">
-  <strong>Registration & Surveys:</strong> https://events.hifis.net/event/2097/
+  <strong>Registration & Survey:</strong> <a href="https://events.hifis.net/event/2097/">https://events.hifis.net/event/2097/</a>
 </p>
 
 {% comment %}
