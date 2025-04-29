@@ -335,7 +335,7 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
-<p>A post-workshop survey will open on the second day of the workshop at the bottom of the course registration website. We appreciate it if you take the survey as it is essential for improving this course.</p>
+<p>A survey will open on the second day of the workshop at the bottom of the course registration website. We appreciate it if you take the survey as it is essential for improving our HIDA workshops.</p>
 <p><a href="https://events.hifis.net/event/2097/">Post-workshop Survey</a></p>
 
 <hr/>
